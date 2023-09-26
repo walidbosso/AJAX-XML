@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function Suggest(str) {
+     if (str.length == 0) { 
+         document.getElementById("hint").innerHTML = "";
+         return;
+     } else {
+         var xmlhttp = new XMLHttpRequest();
+         xmlhttp.onreadystatechange = function() {
+             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                 document.getElementById("hint").innerHTML = xmlhttp.responseText;
+             }
+         }
+         xmlhttp.open("GET", "suggest.php?q="+str, true);
+         xmlhttp.send();
+     }
+}
+</script>
+</head>
+<body>
+
+<form> 
+Name: <input type="text" onkeyup="Suggest(this.value)">
+</form>
+<p>Suggestions: <span id="hint"></span></p>
+</body>
+</html>
