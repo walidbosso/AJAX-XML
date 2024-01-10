@@ -33,11 +33,9 @@
 This repository contains two mini projects focusing on XML and AJAX:
 
 1. **XML Parsing**
-   - Initial commit: 4 months ago
    - Contains files related to XML parsing.
 
 2. **AJAX Search Suggest and Database Select Menu**
-   - Initial commit: 4 months ago
    - Contains PHP code for search suggestion and a database select menu using AJAX.
    - Includes XML parsing functionality.
 
